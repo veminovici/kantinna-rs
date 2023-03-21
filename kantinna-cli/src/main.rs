@@ -6,7 +6,6 @@ mod appinfo;
 mod commands;
 mod config;
 
-use appinfo::*;
 use commands::*;
 use config::*;
 
