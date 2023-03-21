@@ -1,0 +1,11 @@
+[workspace]
+members = ["kantinna", "kantinna-cli"]
+
+[workspace.dependencies]
+anyhow = "1.0"
+clap = { version = "4.1", features = ["cargo", "derive"] }
+env_logger = "0.10"
+futures = "0.3"
+log = "0.4"
+serde = { version = "1.0.152", features = ["derive"] }
+toml = {version = "0.7.2", features = ["parse"] }
