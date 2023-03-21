@@ -2,7 +2,7 @@ use anyhow::Result;
 use clap::{Arg, ArgMatches, Command};
 use log::debug;
 
-use crate::config::Config;
+use crate::{appinfo::AppInfo, config::Config};
 
 pub const NAME: &str = "config";
 
@@ -79,7 +79,7 @@ where
     match key.as_ref() {
         // foam_meili::NAME => println!("{}", config.meili),
         // foam_search::NAME => println!("{}", config.search),
-        //APP => println!("{}", AppInfo::default()),
+        APP => println!("{}", AppInfo::default()),
         _ => println!("Get_key_values: {}", key.as_ref()),
     }
 
@@ -87,6 +87,7 @@ where
 }
 
 fn print_config(config: &Config) {
-    // println!("{}", AppInfo::default());
+    println!("{}", AppInfo::default());
+    println!("[config]");
     println!("{config}")
 }

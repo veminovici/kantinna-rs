@@ -2,9 +2,11 @@ use anyhow::Result;
 use clap::command;
 use log::{debug, info};
 
+mod appinfo;
 mod commands;
 mod config;
 
+use appinfo::*;
 use commands::*;
 use config::*;
 

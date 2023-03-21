@@ -1,5 +1,6 @@
 [package]
 name = "kantinna-cli"
+authors = ["Vlad Eminovici <veminovici@hotmail.com>"]
 version = "0.1.0"
 edition = "2021"
 default-run = "kantinna-cli"
