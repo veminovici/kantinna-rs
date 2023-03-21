@@ -20,9 +20,7 @@ impl CommandExt for clap::Command {
 
 #[inline]
 fn builtin() -> Vec<clap::Command> {
-    vec![
-        config::command(),
-    ]
+    vec![config::command()]
 }
 
 pub trait ArgMatchesExt {
@@ -43,5 +41,3 @@ impl ArgMatchesExt for ArgMatches {
         }
     }
 }
-
-

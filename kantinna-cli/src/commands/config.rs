@@ -15,7 +15,9 @@ const LIST_SHORT: char = 'L';
 const LIST_ABOUT: &str = "Print the entire configuration";
 
 fn list_command() -> Command {
-    Command::new(LIST_NAME).short_flag(LIST_SHORT).about(LIST_ABOUT)
+    Command::new(LIST_NAME)
+        .short_flag(LIST_SHORT)
+        .about(LIST_ABOUT)
 }
 
 const GET_NAME: &str = "get";
@@ -26,12 +28,15 @@ const ARG_KEY: &str = "key";
 const ARG_KEY_HELP: &str = "The configuration key to be displayed";
 
 fn get_command() -> Command {
-    Command::new(GET_NAME).short_flag(GET_SHORT).about(GET_ABOUT).arg(
-        Arg::new(ARG_KEY)
-            .help(ARG_KEY_HELP)
-            .required(true)
-            .num_args(1..),
-    )
+    Command::new(GET_NAME)
+        .short_flag(GET_SHORT)
+        .about(GET_ABOUT)
+        .arg(
+            Arg::new(ARG_KEY)
+                .help(ARG_KEY_HELP)
+                .required(true)
+                .num_args(1..),
+        )
 }
 
 pub fn command() -> Command {
