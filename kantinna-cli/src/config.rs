@@ -1,19 +1,19 @@
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
-use std::{path::Path, fmt::Display};
+use std::{fmt::Display, path::Path};
 
-pub(crate) const CONFIG_TOML: &str = "kantinna.toml";
+pub const CONFIG_TOML: &str = "kantinna.toml";
 const PLUGINS_PATH: &str = "./kantinaa/plugins";
 
 #[derive(Debug, Deserialize, Serialize)]
-pub(crate) struct Config {
+pub struct Config {
     plugins_path: String,
 }
 
 impl Default for Config {
     fn default() -> Self {
-        Self { 
-            plugins_path: PLUGINS_PATH.to_string() 
+        Self {
+            plugins_path: PLUGINS_PATH.to_string(),
         }
     }
 }
